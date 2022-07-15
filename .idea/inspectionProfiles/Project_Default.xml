@@ -1,0 +1,36 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="8">
+            <item index="0" class="java.lang.String" itemvalue="nobr" />
+            <item index="1" class="java.lang.String" itemvalue="noembed" />
+            <item index="2" class="java.lang.String" itemvalue="comment" />
+            <item index="3" class="java.lang.String" itemvalue="noscript" />
+            <item index="4" class="java.lang.String" itemvalue="embed" />
+            <item index="5" class="java.lang.String" itemvalue="script" />
+            <item index="6" class="java.lang.String" itemvalue="min-resolution" />
+            <item index="7" class="java.lang.String" itemvalue="middleheader" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="market.models.Kategori" />
+          <option value="AADYonetim.Market.models.UserProfile" />
+          <option value="AADRoot.AADRoot.authentication" />
+          <option value="AADRoot.AADRoot.market" />
+          <option value="bool.save" />
+          <option value="tuple.status_code" />
+          <option value="kermes.api.serializers.all_area" />
+          <option value="str.new_List" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
