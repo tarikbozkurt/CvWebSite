@@ -127,13 +127,21 @@ min-height: 100vh;
   padding: 15px;
 }
 #my_experiences{
-  height: 150px;
+
   width: 100%;
   background-color: white;
 }
+
+#my_experience_job_for_loop{
+  text-align: justify;
+    background-color: white;
+    padding: 50px;
+    font-size: 15px;
+    min-height: 263px;
+}
 #my_Educations
 {
-  height: 150px;
+
   width: 100%;
   background-color: white;
 }

@@ -63,6 +63,8 @@ class Job_experience_me(models.Model):
     job_end_date = models.DateField(blank=True)
     still_working = models.BooleanField(blank=True)
 
+    def __str__(self):
+        return self.company_name
 
 class Informations_me(models.Model):
     p_name = models.CharField(max_length=50, blank=True)

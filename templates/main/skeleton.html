@@ -13,8 +13,30 @@
 
 
 <body>
-<!-- Vertical navbar -->
+<!-- parallax- body_background -->
+<script>
 
+function body_parallax_element( selector, context ) {
+    context = context || document;
+    var elements = context.querySelectorAll( selector );
+    return Array.prototype.slice.call( elements );
+}
+
+window.addEventListener( "scroll", function() {
+    var scrolledHeight= window.pageYOffset;
+    body_parallax_element( "body" ).forEach( function( el, index, array ) {
+        var limit = el.offsetTop + el.offsetHeight;
+        if( scrolledHeight > el.offsetTop && scrolledHeight <= limit ) {
+            el.style.backgroundPositionY = ( scrolledHeight - el.offsetTop ) / 2 + "px";
+        } else {
+            el.style.backgroundPositionY = "0";
+        }
+    });
+});
+
+</script>
+
+<!-- Vertical navbar -->
 <div class="vertical-nav" id="sidebar">
   <div class="container">
       <div class="row">
@@ -136,7 +158,28 @@
 
       <div class="row" >
         <div id="my_experiences" class="col-lg-12 col-md-12 col-sm-12">
-            <p>Burası Deneyim Bölümü</p>
+            <div class="container">
+            <h3 style="color:maroon;text-align: center;margin-top:20px;"> İş Deneyimlerim </h3>
+                <div class="row" style="margin-bottom: 20px;justify-content: center;">
+                <hr size="8" width="90%" color="red">
+                    {% for experience in my_Job_Experiences %}
+                    <div id="my_experience_job_for_loop"class="col-md-4">
+                        <div class="my_jobTitle">
+                            <h5><b>{{ experience.company_name }}</b></h5>
+                        </div>
+                        <div class="my_Job_position:"><p>{{ experience.job_position }}</p></div>
+
+                        <div class="my_job_description"><p>{{ experience.job_description }}</p></div>
+
+                       <div class="my_job-start">Başlangıç: {{ experience.job_start_date }}</div>
+                    <div class="my_job-end">Bitiş: {{ experience.job_end_date }}</div>
+
+                    </div>
+
+                    {% endfor %}
+                <hr size="8" width="90%" color="red">
+                </div>
+            </div>
         </div>
       </div>
 

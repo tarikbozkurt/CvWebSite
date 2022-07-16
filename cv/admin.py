@@ -11,4 +11,6 @@ admin.site.register(Education_Types)
 
 admin.site.register(Certifications_me)
 
+admin.site.register(Job_experience_me)
+
 admin.site.register(Informations_me)
