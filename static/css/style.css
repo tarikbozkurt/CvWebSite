@@ -259,13 +259,19 @@ overflow: hidden;
     margin-top: 0.8rem;
     font-size: 1.5rem;
 }
+.my_job-start{
+  display: none;
+}
+.my_job-end{
+  display: none;
+}
 #my_experience_job_for_loop{
   text-align: justify;
     background-color: white;
     padding: 7px;
     font-size: 0.8rem;
     /* font-size: 0; */
-    min-height: 140px;
+    min-height: 0px;
 }
 #my_experience_job_for_loop .my_job_description p{
   display: none;
@@ -284,7 +290,7 @@ overflow: hidden;
     justify-content: center;
     display: flex;
     -ms-flex-wrap: wrap;
-   flex-wrap: nowrap;
+   flex-wrap: wrap;
     /* margin-right: -15px; */
     /* margin-left: -15px; */
     /* align-items: flex-start;*/
