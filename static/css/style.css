@@ -1,12 +1,55 @@
+@import url('http://fonts.cdnfonts.com/css/depixel');
 
+
+body {
+
+
+background-size: cover;
+
+background-image:
+
+url('/media/ninja.gif');
+
+background-repeat: no-repeat;
+
+
+min-height: 100vh;
+
+
+
+}
+
+.separator {
+  margin: 3rem 0;
+  border-bottom: 1px dashed #fff;
+}
+
+.text-uppercase {
+  letter-spacing: 0.1em;
+}
+
+.text-gray {
+  color: #aaa;
+}
+
+.profileImage{
+  width: 100%;
+}
+.profileImage img{
+  width: 208px;
+  border-radius: 25px;
+  margin-left: 16px;
+}
 .vertical-nav {
   min-width: 15rem;
   position: fixed;
   top: 0;
   left: 0;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.4s;
   height: 100%;
+  background-color: #f2f2f2;
+  box-shadow: #000000 5px 3px 20px 0px;
+  padding: 15px;
 }
 
 .page-content {
@@ -24,6 +67,31 @@
 #content.active {
   width: 100%;
   margin: 0;
+}
+
+#sideMenuCards{
+  margin-top: 50px;
+  color:white;
+  text-align: center;
+ }
+#sideMenuCards .row a{
+  width: 100%;
+  margin: 5px;
+  padding: 2px;
+  color:#6b7e92;
+  text-decoration: none;
+}
+
+
+#sideMenuCards .row a .card{
+  width: 100%;
+  padding: 2px;
+
+}
+
+#sideMenuCards .card:hover{
+  background-color: #d1d9df;
+  text-decoration: none;
 }
 
 @media (max-width: 768px) {
@@ -45,32 +113,16 @@
     margin-left: 17rem;
     width: calc(100% - 17rem);
   }
+  .profileImage{
+  width: 60px;
+}
+.profileImage img{
+  width: 100%;
+  border-radius: 25px;
 }
 
-/*
-*
-* ==========================================
-* FOR DEMO PURPOSE
-* ==========================================
-*
-*/
-
-body {
-  background: #101b26;
-
-  min-height: 100vh;
-  overflow-x: hidden;
+#sideMenuCards{
+  display: none;
 }
 
-.separator {
-  margin: 3rem 0;
-  border-bottom: 1px dashed #fff;
-}
-
-.text-uppercase {
-  letter-spacing: 0.1em;
-}
-
-.text-gray {
-  color: #aaa;
 }
