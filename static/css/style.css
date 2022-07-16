@@ -1,14 +1,18 @@
-@import url('http://fonts.cdnfonts.com/css/depixel');
 
+
+@font-face {
+  font-family: 'VT323';
+  src: url('VT323-Regular.ttf') format('truetype');
+}
 
 body {
+font-family:VT323;
 
+font-size: 22px;
 
 background-size: cover;
 
-background-image:
-
-url('/media/ninja.gif');
+background-image: url('/media/ninja.gif');
 
 background-repeat: no-repeat;
 
@@ -34,6 +38,7 @@ min-height: 100vh;
 
 .profileImage{
   width: 100%;
+ text-align: center;
 }
 .profileImage img{
   width: 208px;
@@ -57,8 +62,12 @@ min-height: 100vh;
   margin-left: 17rem;
   transition: all 0.4s;
 }
-
+.page-content .row{
+  margin-top:20px;
+}
 /* for toggle behavior */
+
+
 
 #sidebar.active {
   margin-left: -17rem;
@@ -86,6 +95,7 @@ min-height: 100vh;
 #sideMenuCards .row a .card{
   width: 100%;
   padding: 2px;
+  font-size: 19px;
 
 }
 
@@ -94,10 +104,63 @@ min-height: 100vh;
   text-decoration: none;
 }
 
+.poweredByMe{
+    position: fixed;
+
+    bottom: 0px;
+  font-size: 17px;
+}
+
+#about_me_Education{
+  /* height:100%; */
+  text-align: justify;
+  background-color: white;
+  padding: 50px;
+  font-size:15px;
+  min-height: 263px;
+}
+#about_me_Education h5{
+  color:maroon;
+}
+.page-content #about_me_Education p{
+  font-size:15px;
+  padding: 15px;
+}
+#my_experiences{
+  height: 150px;
+  width: 100%;
+  background-color: white;
+}
+#my_Educations
+{
+  height: 150px;
+  width: 100%;
+  background-color: white;
+}
+#my_Certifications{
+  height: 150px;
+  width: 100%;
+  background-color: white;
+}
+#eduTableTh tr{
+line-height: 30px;
+}
+
+#eduTableTh th{
+  text-align: inherit;
+    border-top: inset;
+    border-bottom: groove;
+}
+
+#eduTableTb td{
+  border-bottom: outset;
+  padding: 5px;
+}
 @media (max-width: 768px) {
   #sidebar {
     /* margin-left: -17rem; */
     width: 100%;
+    z-index: 1;
     height: 90px;
   }
   #sidebar.active {

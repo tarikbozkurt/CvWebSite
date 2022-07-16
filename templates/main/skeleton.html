@@ -5,7 +5,7 @@
     <title>Title</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="/static/css/style.css">
-
+    <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet'>
 
 
 
@@ -85,6 +85,10 @@
             </a>
         </div>
     </div>
+
+    <div class="poweredByMe">
+        <p>Copyright © 2022 A. Tarık BOZKURT</p>
+    </div>
 </div>
 <!-- End vertical navbar -->
 
@@ -92,32 +96,72 @@
 <!-- Page content holder -->
 <div class="page-content p-5" id="content">
 
-  <!-- Demo content -->
 
 
 
-
-  <div class="row text-white" >
-
-      <hr>
-    <div class="col-lg-1 col-md-1">
-
-    </div>
-
-    <div class="col-lg-6 col-md-5">
-        <p>buraya eğitim bilgileri gelebilir.</p>
-    </div>
-
-    <div class="col-lg-4 col-md-5">
-
-    </div>
-
-      <div class="col-lg-1 col-md-1">
-
-    </div>
-
+      <div class="row" >
+        <div id="about_me_Education" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <h5>Merhaba ben {{ personelInf.p_name }} {{ personelInf.p_surname }};</h5>
+            <p>{{ personelInf.p_about}}</p>
+        </div>
+         <div id="about_me_Education" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="container">
+                <h5>Education</h5>
+                <div class="table-reponsive">
+                    <table class="table-style">
+                          {% for educate in my_educations %}
+                               <thead id="eduTableTh">
+                                   <tr>
+                                       <th>Üniversite Adı </th>
+                                       <th >Başlangıç / Bitiş </th>
+                                   </tr>
+                               </thead>
+                              <tbody id="eduTableTb">
+                                      <tr>
+                                        <td>
+                                            {{ educate.edu_name }}
+                                        </td>
+                                      <td>
+                                          {{ educate.edu_start_date|date:"M d, Y" }} /  {{ educate.edu_ended_date|date:"M d, Y" }}
+                                      </td>
+                                      </tr>
+                                </tbody>
+                          {% endfor %}
+                    </table>
+                </div>
+          </div>
+        </div>
 
   </div>
+
+      <div class="row" >
+        <div id="my_experiences" class="col-lg-12 col-md-12 col-sm-12">
+            <p>Burası Deneyim Bölümü</p>
+        </div>
+      </div>
+
+      <div class="row" >
+        <div id="my_Educations" class="col-lg-12 col-md-12 col-sm-12">
+            <p>Burası lisanslar Ve Sertifikalar</p>
+        </div>
+      </div>
+
+      <div class="row" >
+        <div id="my_Certifications" class="col-lg-12 col-md-12 col-sm-12">
+            <p>Burası Yetkinliklerim </p>
+        </div>
+      </div>
+
+      <div class="row" >
+            <div id="my_Certifications" class="col-lg-12 col-md-12 col-sm-12">
+                <p>Burası Sosyal Medya Hesaplarım </p>
+            </div>
+      </div>
+
+
+
+
+
 
 
 </div>
