@@ -49,7 +49,17 @@ window.addEventListener( "scroll", function() {
       </div>
 
   </div>
+     <div class="my_social_m_menu">
 
+         {% for social in my_CvMenu %}
+             <div id="my_social_m_menu_container" class="container" >
+         <img src="{{ social.m_menu_ıcon.url }}">
+
+         <h8>{{ social.m_menu_name }}</h8>
+</div>
+         {% endfor %}
+     </td>
+     </div>
      <div id="mySidepanel" class="sidepanel" style="">
               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
               {% for my_s_menu in my_CvMenu %}
