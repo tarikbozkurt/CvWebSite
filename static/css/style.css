@@ -164,8 +164,12 @@ display: none;
 
 }
 .c-gif{
-    background-image: url(/media/opm-ok.gif);
+        background-image: url(/media/opm-ok.gif);
     background-repeat: no-repeat;
+    height: 240px;
+    width: 100%;
+    background-size: contain;
+    margin-top: 50px;
 }
 @media (max-width: 908px) {
     .sidepanel{
@@ -298,7 +302,9 @@ display: none;
         font-size: 0.8rem;
         color: black;
     }
-
+.c-gif{
+    display: none;
+}
 }
 @media (max-width: 768px) {
 #about_me_Education{
