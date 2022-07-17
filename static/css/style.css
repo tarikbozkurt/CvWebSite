@@ -115,11 +115,13 @@ min-height: 100vh;
 }
 #my_experiences{
 
-  width: 100%;
-  background-color: white;
-  border-radius: 25px;
+width: 100%;
+
+background-color: white;
+
+border-radius: 25px;
 }
-#my_experience_job_for_loop{text-align: justify;background-color: #f7f7f7;padding: 50px;font-size: 15px;min-height: 263px;/* box-shadow: #870000 3px 3px 0px 0px; */border-style: outset;}
+#my_experience_job_for_loop{text-align: justify;background-color: #f7f7f7;padding: 7px;font-size: 15px;min-height: 207px;/* box-shadow: #870000 3px 3px 0px 0px; */border-style: outset;}
 #my_Educations {
 
   width: 100%;
@@ -155,7 +157,16 @@ line-height: 30px;
   .my_social_m_menu{
 display: none;
     }
+.container-gif{
+    height: 50%;
 
+    width: 100%;
+
+}
+.c-gif{
+    background-image: url(/media/opm-ok.gif);
+    background-repeat: no-repeat;
+}
 @media (max-width: 908px) {
     .sidepanel{
         display: none;
