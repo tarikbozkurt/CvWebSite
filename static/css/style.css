@@ -317,12 +317,12 @@ overflow: hidden;
   text-align: inherit;
   border-top: inset;
   border-bottom: groove;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 #eduTableTb td{
   border-bottom: outset;
   padding: 5px;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
 }
 #my_experiences h3{
   color: maroon;
