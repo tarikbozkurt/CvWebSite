@@ -52,13 +52,9 @@ window.addEventListener( "scroll", function() {
 
      <div id="mySidepanel" class="sidepanel" style="">
               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-              <a href="#">Ana Sayfa</a>
-              <a href="#">Hakkımızda</a>
-              <a href="#">Çalışma Alanlarımız</a>
-              <a href="#">Ekibimiz</a>
-              <a href="#">Kariyer</a>
-              <a href="#">Yayınlar</a>
-              <a href="#">İletişim</a>
+              {% for my_s_menu in my_CvMenu %}
+         <a href="#">{{ my_s_menu.m_menu_name}}</a>
+              {% endfor %}
        </div>
         <div class="my_m_sideMenu"></div>
         <button class="openbtn" onclick="openNav()">☰</button>
