@@ -40,79 +40,68 @@ window.addEventListener( "scroll", function() {
 <div class="vertical-nav" id="sidebar">
   <div class="container">
       <div class="row">
-          <div class="profileImage">
-              <img src="{{ personelInf.p_picture.url }}" alt="my_Profile_Pic">
-          </div>
+
+              <div class="profileImage">
+                  <img src="{{ personelInf.p_picture.url }}" alt="my_Profile_Pic">
+              </div>
+
+
       </div>
+
   </div>
 
+     <div id="mySidepanel" class="sidepanel" style="">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+              <a href="#">Ana Sayfa</a>
+              <a href="#">Hakkımızda</a>
+              <a href="#">Çalışma Alanlarımız</a>
+              <a href="#">Ekibimiz</a>
+              <a href="#">Kariyer</a>
+              <a href="#">Yayınlar</a>
+              <a href="#">İletişim</a>
+       </div>
+        <div class="my_m_sideMenu"></div>
+        <button class="openbtn" onclick="openNav()">☰</button>
+
+                <script>
+                function openNav() {
+                  document.getElementById("mySidepanel").style.width = "250px";
+                }
+
+                function closeNav() {
+                  document.getElementById("mySidepanel").style.width = "0";
+                }
+                </script>
+
     <div id="sideMenuCards" class="container">
+        {% for cv_menu in my_CvMenu %}
         <div class="row">
             <a href="#">
             <div class="card">
-                <div class="card-header">
-                    Hakkımda
+                <div class="card-header" style="padding:0px;">
+                    {{ cv_menu.m_menu_name }}
                 </div>
             </div>
                 </a>
         </div>
+        {% endfor %}
 
-        <div class="row">
-            <a href="#">
-            <div class="card">
-                <div class="card-header">
-                    Yetkinliklerim
-                </div>
-            </div>
-            </a>
-        </div>
-
-        <div class="row">
-            <a href="#">
-            <div class="card">
-                <div class="card-header">
-                    Projelerim
-                </div>
-            </div>
-            </a>
-        </div>
-
-        <div class="row">
-            <a href="#">
-            <div class="card">
-                <div class="card-header">
-                    Sosyal Medya Hesaplarım
-                </div>
-            </div>
-            </a>
-        </div>
-
-        <div class="row">
-            <a href="#">
-            <div class="card">
-                <div class="card-header">
-                    Aldığım Kurslar
-                </div>
-            </div>
-            </a>
-        </div>
-
-        <div class="row">
-            <a href="#">
-            <div class="card">
-                <div class="card-header">
-                    Aldığım Sertifikalar
-                </div>
-            </div>
-            </a>
-        </div>
     </div>
 
     <div class="poweredByMe">
-        <p>Copyright © 2022 A. Tarık BOZKURT</p>
+        <p style="background-color:#9f7d7d;">Powered By A.Tarık BOZKURT</p>
     </div>
 </div>
 <!-- End vertical navbar -->
+
+
+
+
+
+
+
+
+
 
 
 <!-- Page content holder -->
@@ -163,13 +152,13 @@ window.addEventListener( "scroll", function() {
                 <div id="my_experience-row"class="row">
                 <hr size="8" width="90%" color="red">
                     {% for experience in my_Job_Experiences %}
-                    <div id="my_experience_job_for_loop"class="col-md-4">
+                    <div id="my_experience_job_for_loop"class="col-lg-4 col-md-5 ">
                         <div class="my_jobTitle">
                             <h5><b class="my_experience_me_b">{{ experience.company_name }}</b></h5>
                         </div>
                         <div class="my_Job_position:"><p>{{ experience.job_position }}</p></div>
 
-                        <div class="my_job_description"><p>{{ experience.job_description }}</p></div>
+                        <div class="my_job_description"><p><b>{{ experience.job_description }}</b></p></div>
 
                        <div class="my_job-start">Başlangıç:  {{ experience.job_start_date}}</div>
                     <br>
@@ -187,6 +176,7 @@ window.addEventListener( "scroll", function() {
       <div class="row" >
         <div id="my_Educations" class="col-lg-12 col-md-12 col-sm-12">
             <p>Burası lisanslar Ve Sertifikalar</p>
+            
         </div>
       </div>
 
