@@ -1,12 +1,19 @@
+{% load static %}
+<!doctype html>
 <html lang="en"><head>
     <meta charset="UTF-8">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Title</title>
+    <title>A. Tarık BOZKURT</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="/static/css/style.css">
-    <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/owl.theme.default.min.css' %}">
 
+
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
 
 
 </head>
@@ -50,16 +57,44 @@ window.addEventListener( "scroll", function() {
 
   </div>
      <div class="my_social_m_menu">
-
+        <div id="my_social_m_menu_owl" class="owl-carousel owl-theme">
          {% for social in my_CvMenu %}
+              <div class="item">
              <div id="my_social_m_menu_container" class="container" >
-         <img src="{{ social.m_menu_ıcon.url }}">
+                         <img src="{{ social.m_menu_ıcon.url }}">
 
-         <h8>{{ social.m_menu_name }}</h8>
-</div>
+                         <h8>{{ social.m_menu_name }}</h8>
+             </div>
+
+                </div>
          {% endfor %}
-     </td>
+        </div>
+     <script>
+                       $('.owl-carousel').owlCarousel({
+                                loop:true,
+                                margin:10,
+                                nav:true,
+                                responsive:{
+                                    0:{
+                                        items:3
+                                    },
+                                    400:{
+                                        items:4
+                                    },
+                                    600:{
+                                        items:6
+                                    },
+                                    768:{
+                                        items:7
+                                    },
+                                    1000:{
+                                        items:7
+                                    }
+                                }
+                            })
+</script>
      </div>
+
      <div id="mySidepanel" class="sidepanel" style="">
               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
               {% for my_s_menu in my_CvMenu %}
@@ -95,6 +130,11 @@ window.addEventListener( "scroll", function() {
     </div>
 
     <div class="poweredByMe">
+        <img src="/media/picture-67696-1654292591.png" style="width: 107px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    left: 0px;">
         <p style="background-color:#9f7d7d;">Powered By A.Tarık BOZKURT</p>
     </div>
 
@@ -128,8 +168,9 @@ window.addEventListener( "scroll", function() {
         </div>
          <div id="about_me_Education" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                 <div class="container">
-                <h5>Eğitimim</h5>
-                <div class="table-reponsive">
+                <h5 style="text-align: center;">Eğitimim</h5>
+                <div class="table-reponsive" style="    display: flex;
+    justify-content: center;">
                     <table class="table-style">
                           {% for educate in my_educations %}
                                <thead id="eduTableTh">
@@ -156,14 +197,15 @@ window.addEventListener( "scroll", function() {
 
   </div>
 
-      <div class="row" style="display: flex;
-    justify-content: center;">
+      <div class="row" style="display: flex;justify-content: center;">
         <div id="my_experiences" class="col-lg-9 col-md-12 col-sm-12">
+
             <div class="container">
             <h3 style="color:maroon;text-align: center;margin-top:20px;"> İş Deneyimlerim </h3>
                 <div id="my_experience-row"class="row">
                 <hr size="8" width="90%" color="red">
                     {% for experience in my_Job_Experiences %}
+
                     <div id="my_experience_job_for_loop"class="col-lg-4 col-md-5 ">
                         <div class="my_jobTitle">
                             <h5><b class="my_experience_me_b">{{ experience.company_name }}</b></h5>
@@ -183,23 +225,42 @@ window.addEventListener( "scroll", function() {
                 </div>
             </div>
         </div>
-      </div>
-
-      <div class="row" >
-        <div id="my_Educations" class="col-lg-12 col-md-12 col-sm-12">
-            <p>Burası lisanslar Ve Sertifikalar</p>
-            
         </div>
-      </div>
+
+
 
       <div class="row" >
-        <div id="my_Certifications" class="col-lg-12 col-md-12 col-sm-12">
+                <div id="my_Certifications" class="col-lg-12 col-md-12 col-sm-12">
+
+
+                                <div class="owl-carousel owl-theme">
+                                    <div class="item"><h4>1</h4></div>
+                                    <div class="item"><h4>2</h4></div>
+                                    <div class="item"><h4>3</h4></div>
+                                    <div class="item"><h4>4</h4></div>
+                                    <div class="item"><h4>5</h4></div>
+                                    <div class="item"><h4>6</h4></div>
+                                    <div class="item"><h4>7</h4></div>
+                                    <div class="item"><h4>8</h4></div>
+                                    <div class="item"><h4>9</h4></div>
+                                    <div class="item"><h4>10</h4></div>
+                                    <div class="item"><h4>11</h4></div>
+                                    <div class="item"><h4>12</h4></div>
+                                </div>
+
+
+              </div>
+      </div>
+
+
+      <div class="row" >
+        <div id="my_Abilities" class="col-lg-12 col-md-12 col-sm-12">
             <p>Burası Yetkinliklerim </p>
         </div>
       </div>
 
       <div class="row" >
-            <div id="my_Certifications" class="col-lg-12 col-md-12 col-sm-12">
+            <div id="my_SocialMedya" class="col-lg-12 col-md-12 col-sm-12">
                 <p>Burası Sosyal Medya Hesaplarım </p>
             </div>
       </div>
@@ -213,7 +274,8 @@ window.addEventListener( "scroll", function() {
 </div>
 <!-- End demo content -->
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 

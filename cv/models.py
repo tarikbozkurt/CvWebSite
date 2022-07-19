@@ -6,6 +6,25 @@ from django.db import models
 # Create your models here.
 
 
+class Abilities(models.Model):
+    ablt_name=models.CharField(max_length=50,blank=True)
+    ablt_image=models.ImageField(blank=True)
+
+    ablt_experience = models.IntegerField(blank=True,default=0)
+
+    def __str__(self):
+        return self.ablt_name
+
+class Sub_Abilities(models.Model):
+    parent_ability = models.ForeignKey(Abilities, on_delete=models.CASCADE, blank=True)
+
+    sub_ablt_name = models.CharField(max_length=50,blank=True)
+    sub_ablt_image = models.ImageField(blank=True)
+    sub_ablt_experience = models.IntegerField(blank=True, default=0)
+
+    def __str__(self):
+        return self.sub_ablt_name
+
 
 class Courses(models.Model):
     """
@@ -77,4 +96,6 @@ class Informations_me(models.Model):
 
     def __str__(self):
         return self.p_name
+
+
 

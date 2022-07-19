@@ -14,3 +14,7 @@ admin.site.register(Certifications_me)
 admin.site.register(Job_experience_me)
 
 admin.site.register(Informations_me)
+
+admin.site.register(Abilities)
+
+admin.site.register(Sub_Abilities)

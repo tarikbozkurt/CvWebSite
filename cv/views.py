@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from cv.models import Informations_me,Educations_me,Job_experience_me,Certifications_me
+from cv.models import Informations_me,Educations_me,Job_experience_me,Certifications_me,Abilities,Sub_Abilities
 from rootCv.models import cvMenus
 # Create your views here.
 def mainViews(request):
@@ -9,7 +9,8 @@ def mainViews(request):
     my_Job_Experiences = Job_experience_me.objects.all()
     my_Certifications = Certifications_me.objects.all()
     my_cvMenu = cvMenus.objects.all()
-
+    my_Abilities = Abilities.objects.all()
+    my_SubAbilities = Sub_Abilities.objects.all()
 
     context = {
         'personelInf':personelInf,
@@ -17,6 +18,8 @@ def mainViews(request):
         'my_Job_Experiences':my_Job_Experiences,
         'my_Certifications':my_Certifications,
         'my_CvMenu':my_cvMenu,
+        'my_Abilities':my_Abilities,
+        'my_SubAbilities':my_SubAbilities,
     }
     return render(request,"main/skeleton.html",context)
 
