@@ -445,10 +445,13 @@ position: relative;
     padding-left: 30px;
 }
 .socialTag-arrow{
-width: 35px;
     position: fixed;
-    bottom: 40px;
-    right: 10px;
+right: 17px;
+    bottom: 11px;
+    width: 55px;
+    /* right: 12px; */
+    /* bottom: 40px; */
+    right: 31px;
 }
 .socialTag-arrow img{
 
@@ -751,10 +754,13 @@ position: relative;
     padding-left: 30px;
 }
 .socialTag-arrow{
-width: 35px;
     position: fixed;
-    bottom: 40px;
-    right: 10px;
+right: 17px;
+    bottom: 11px;
+    width: 55px;
+    /* right: 12px; */
+    /* bottom: 40px; */
+    right: 31px;
 }
 .socialTag-arrow img{
 
@@ -871,10 +877,13 @@ position: relative;
     padding-left: 30px;
 }
 .socialTag-arrow{
-width: 35px;
     position: fixed;
-    bottom: 40px;
-    right: 10px;
+right: 17px;
+    bottom: 11px;
+    width: 55px;
+    /* right: 12px; */
+    /* bottom: 40px; */
+    right: 31px;
 }
 .socialTag-arrow img{
 
@@ -989,10 +998,13 @@ position: relative;
     padding-left: 30px;
 }
 .socialTag-arrow{
-width: 35px;
     position: fixed;
-    bottom: 40px;
-    right: 10px;
+
+    bottom: 11px;
+    width: 55px;
+    /* right: 12px; */
+    /* bottom: 40px; */
+    right: 11px;
 }
 .socialTag-arrow img{
 
