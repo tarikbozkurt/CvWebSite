@@ -18,3 +18,6 @@ admin.site.register(Informations_me)
 admin.site.register(Abilities)
 
 admin.site.register(Sub_Abilities)
+
+
+admin.site.register(SocialMedia)

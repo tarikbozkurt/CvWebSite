@@ -4,7 +4,14 @@ from django.db import models
 from django.db import models
 
 # Create your models here.
+class SocialMedia(models.Model):
+    s_media_name = models.CharField(max_length=50,blank=True)
+    s_media_url = models.URLField(max_length=150,blank=True)
 
+    s_media_icon =models.ImageField(blank=True)
+
+    def __str__(self):
+        return self.s_media_name
 
 class Abilities(models.Model):
     ablt_name=models.CharField(max_length=50,blank=True)

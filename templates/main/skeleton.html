@@ -70,7 +70,7 @@ window.addEventListener( "scroll", function() {
          {% endfor %}
         </div>
      <script>
-                       $('.owl-carousel').owlCarousel({
+                       $('#my_social_m_menu_owl').owlCarousel({
                                 loop:true,
                                 margin:10,
                                 nav:true,
@@ -146,21 +146,13 @@ window.addEventListener( "scroll", function() {
 <!-- End vertical navbar -->
 
 
-
-
-
-
-
-
-
-
-
 <!-- Page content holder -->
 <div class="page-content p-5" id="content">
+<!-- End Page content holder -->
 
 
 
-
+<!-- about me and educations -->
       <div class="row" >
         <div id="about_me_Education" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
             <h5>Merhaba ben {{ personelInf.p_name }} {{ personelInf.p_surname }};</h5>
@@ -196,7 +188,10 @@ window.addEventListener( "scroll", function() {
         </div>
 
   </div>
+<!-- End about me and educations -->
 
+
+<!-- Job-experience -->
       <div class="row" style="display: flex;justify-content: center;">
         <div id="my_experiences" class="col-lg-9 col-md-12 col-sm-12">
 
@@ -226,9 +221,11 @@ window.addEventListener( "scroll", function() {
             </div>
         </div>
         </div>
+<!-- End Job-experience -->
 
 
 
+<!-- Certifications -->
       <div class="row" >
                 <div id="my_Certifications" class="col-lg-12 col-md-12 col-sm-12">
 
@@ -251,19 +248,20 @@ window.addEventListener( "scroll", function() {
 
               </div>
       </div>
+<!--End Certifications -->
 
 
+
+<!-- Abilities -->
       <div class="row" >
         <div id="my_Abilities" class="col-lg-12 col-md-12 col-sm-12">
             <p>Burası Yetkinliklerim </p>
         </div>
       </div>
+<!--End Abilities -->
 
-      <div class="row" >
-            <div id="my_SocialMedya" class="col-lg-12 col-md-12 col-sm-12">
-                <p>Burası Sosyal Medya Hesaplarım </p>
-            </div>
-      </div>
+
+
 
 
 
@@ -273,7 +271,50 @@ window.addEventListener( "scroll", function() {
 
 </div>
 <!-- End demo content -->
+<!-- Social-Medya-Footer-Static -->
+<div id="mobileFooter" class="footer">
 
+      <div class="row" >
+            <div id="my_SocialMedya" style="" class="col-lg-12 col-md-12 col-sm-12">
+            <div class="socialTag">
+                <h5>İletişim</h5>
+            </div>
+            <div class="socialTag-arrow">
+                <img src="/media/animated-arrow-image-0266.gif" alt="left-arrow-trkbzkrt">
+            </div>
+            <div id="social-owl-carousel" class="owl-carousel owl-theme">
+                {% for social in my_social_medias %}
+                    <a href="{{ social.s_media_url }}">
+                    <div class="item">
+
+                       <img src="{{ social.s_media_icon.url }}" style="width: 42px;">
+                        <h8>{{ social.s_media_name }}</h8>
+
+                    </div>
+                    </a>
+                {% endfor %}
+            </div>
+            <script>
+                        $('#social-owl-carousel').owlCarousel({
+                            loop:true,
+                            margin:5,
+                            responsive:{
+                                0:{
+                                    items:3
+                                },
+                                600:{
+                                    items:4
+                                },
+                                1000:{
+                                    items:5
+                                }
+                            }
+                        })
+            </script>
+            </div>
+      </div>
+</div>
+<!-- End social-medya-footer-static -->
 
 
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
